@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contactos</title>
+  <link rel="stylesheet" href="./css/fonts.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/mobile.css">
+  <link rel="shortcut icon" href="./imagenes/Code.ico" type="image/x-icon">
+  <link rel="stylesheet" href="./css/sweetalert2.css">
+  <script src="./js/sweetalert2.min.js"></script>
+</head>
+
+<body>
+  <!-- Contenedor general de la Aplicación -->
+  <div class="contenedor">
+    <!-- Formulario de ingreso de datos -->
+    <div class="contenedor_formulario">
+      <!-- Título del formulario -->
+      <h2 class="formulario__titulo">Ingreso de datos</h2>
+      <!-- Input Nombre -->
+      <label class="formulario_label">
+        <input type="text" class="formulario__input" id="inputNombre" placeholder="" autocomplete="off" />
+        <span class="formulario_span">Nombre:</span>
+      </label>
+      <!-- Input Apellido -->
+      <label class="formulario_label">
+        <input type="text" class="formulario__input" id="inputApellido" placeholder="" autocomplete="off" />
+        <span class="formulario_span">Apellido:</span>
+      </label>
+      <!-- Input Teléfono -->
+      <label class="formulario_label">
+        <input type="number" class="formulario__input" id="inputTelefono" placeholder="" autocomplete="off" />
+        <span class="formulario_span">Teléfono:</span>
+      </label>
+      <div class="formulario_botones">
+        <!-- Botón Registrar -->
+        <button class="formulario__boton" id="botonRegistrar">
+          Registrar
+        </button>
+        <!-- Botón Mostrar/Ocultar tabla -->
+        <button class="formulario__boton" id="botonMostrar">
+          Mostrar
+        </button>
+      </div>
+    </div>
+    <!-- Contenedor de búsqueda y tabla de datos -->
+    <div class="contenedor_datos">
+      <!-- Sistema de búsqueda por nombre -->
+      <div class="contenedor_filtro">
+        <!-- Input que recibe dato a buscar (nombre) -->
+        <input type="text" class="filtro_input" id="inputFiltro" placeholder="Nombre del contacto" autocomplete="off" />
+        <!-- Botón de búsqueda (Lupa) -->
+        <span class="icon-search" id="botonFiltrar"></span>
+      </div>
+      <!-- Tabla para mostrar resultados -->
+      <table class="contenedor_tabla" id="tablaDatos">
+        <!-- Título de la tabla -->
+        <caption class="tabla_titulo">Registros</caption>
+        <!-- Encabezado (Campos de la tabla) -->
+        <thead>
+          <tr>
+            <th class="tabla__campo">Id</th>
+            <th class="tabla__campo">Nombre</th>
+            <th class="tabla__campo">Apellido</th>
+            <th class="tabla__campo">Teléfono</th>
+          </tr>
+        </thead>
+        <!-- Cuerpo de la tabla -->
+        <tbody class="tabla_resultados" id="resultados"></tbody>
+      </table>
+    </div>
+  </div>
+  <!-- Scripts de la aplicación -->
+  <script type="module" src="./js/script.js"></script>
+</body>
+
+</html>

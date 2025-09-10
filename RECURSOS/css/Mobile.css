@@ -1,0 +1,42 @@
+/* DESKTOP FIRST */
+/* Celulares */
+@media (max-width: 600px) {
+  .contenedor {
+    width: 98%;
+    margin: 10px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .contenedor__formulario {
+    width: 90%;
+    height: 270px;
+  }
+
+  .formulario__label {
+    width: 200%;
+    font-size: 1.2em;
+  }
+
+  .formulario__boton {
+    font-size: 1em;
+  }
+
+  .contenedor__datos {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    width: 98%;
+    height: 50%;
+  }
+
+  table td {
+    text-align: center;
+    font-size: 1em;
+    padding: 8px 0;
+  }
+}
