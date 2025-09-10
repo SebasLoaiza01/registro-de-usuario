@@ -1,27 +1,24 @@
 /* Reset General */
-
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* configuracion fuente */
-
+/* Configuración fuente */
 @font-face {
   font-family: "miFuente";
   src: url("../fonts/Roboto-Regular.ttf");
 }
 
-/* medidas de referencia html */
+/* Medidas de referencia html */
 html {
   font-size: 100%;
   width: 100%;
   height: 100%;
 }
 
-/* configuracion del body */
-
+/* Configuración del body */
 body {
   background: azure;
   font-family: miFuente;
@@ -36,202 +33,189 @@ body {
   gap: 20px;
 }
 
+/* Caja del formulario */
 .contenedor_formulario {
   border: 1px solid gray;
   box-shadow: 0 0 3px rgba(0, 0, 0, 0.9);
-  width: 80%;
+  width: 30%;
   margin: 0 auto;
   display: flex;
-  width: 30%;
   flex-direction: column;
   align-items: center;
+  padding: 15px;
+  border-radius: 8px;
+  background: #fff;
 }
 
 .formulario_titulo {
-margin-top: 10px;
-font-weight: bold;
-font-size: 22px;
- }
-
- .formulario_label {
- margin-top: 25px;
-display: grid;
-width: 200px;
- padding: 3px 0px;
-font-size: 1.lem;
-grid-template-areas: "input";
-
-> * {
-  grid-area: input;
-}
- }
-
- .formulario_span {
-transform-origin: left;
-transition: transform 0.5s color 0.5s;
- }
-
- .formulario_input {
- height: 100%;
- border: none;
-outline: none;
- border-bottom: 2px solid slateblue;
- font: inherit;
- border-radius: 0px;
-padding-left: 2px;
-background: azure;
- }
-
- /* Elimina flechas de desplazamiento de input numerico */
-
- input[type="number"]::-webkit-inner-spin-button,
-input[type="number"]::-webkit-outer-spin-button {
--webkit-appearance: none;
- margin: 0;
+  margin-top: 10px;
+  font-weight: bold;
+  font-size: 22px;
 }
 
-.formulario_input:focus + .formulario_span,
-.formulario_input:not(:placeholder-shown) + .formulario_span,
- .formulario_input:not(:placeholder-shown) .formulario_span:focus-within {
- color: slateblue;
- transform: translate(0, -100%) scale(1);
- }
+/* Labels arriba de los inputs */
+.formulario_label {
+  margin-top: 15px;
+  width: 100%;
+  font-size: 16px;
+  font-weight: bold;
+}
 
- .formulario_botones {
- display: flex;
- gap: 5px;
- }
+.formulario_input {
+  width: 100%;
+  padding: 8px 12px;
+  margin-top: 5px;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  font-size: 16px;
+  background: #fff;
+  outline: none;
+}
 
- .formulario_boton {
- margin: 15px 0;
- border: 2px solid slateblue;
- padding: 5px 7px;
- border-radius: 5px;
- font-weight: bold;
- color: slateblue;
- cursor: pointer;
- }
+/* Botones */
+.formulario_botones {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
 
- .formulario_boton:hover {
-  background: rgba(0, 0, 0, 0.5);
-  color: azure;
- }
+.formulario_boton {
+  border: 2px solid slateblue;
+  padding: 6px 12px;
+  border-radius: 5px;
+  font-weight: bold;
+  color: slateblue;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
 
+.formulario_boton:hover {
+  background: slateblue;
+  color: white;
+}
+
+/* Sección datos */
 .contenedor__datos {
-display: flex;
-flex-direction: column;
-gap: 5px;
-align-items: center;
-justify-content: center;
-width: 70%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  width: 70%;
 }
 
+/* Filtro */
 .contenedor_filtro {
   display: flex;
-  gap: 2px;
+  gap: 5px;
 }
 
 .filtro_input {
+  width: 250px;
   font-size: 1em;
-  padding: 5px;
+  padding: 8px 12px;
+  border: 1px solid #aaa;
+  border-radius: 5px;
 }
 
 .icon_search {
-  padding: 3px;
-  background: azure;
-  border: none;
+  padding: 5px;
+  background: #fff;
+  border: 1px solid #aaa;
+  border-radius: 5px;
   font-size: 1.2em;
   color: black;
+  cursor: pointer;
 }
 
+/* Tabla */
 .contenedor_tabla {
   border-collapse: collapse;
   margin: 0 auto;
   max-width: 800px;
   width: 100%;
-  height: auto;
+  table-layout: fixed;
 }
 
 .tabla_titulo {
-font-weight: bold;
-margin-bottom: 5px;
-font-size: 20px;
-padding: 5px 0;
-text-align: center;
-background: rgb(3, 180, 97);
-border: 1px solid graysilver;
-box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.3), 3px 0px 3px rgba(0, 0, 0, 0.3);
+  font-weight: bold;
+  margin-bottom: 5px;
+  font-size: 20px;
+  padding: 5px 0;
+  text-align: center;
+  background: rgb(3, 180, 97);
+  border: 1px solid silver;
+  color: white;
 }
 
 .tabla_campos {
   background: #eee3e3;
-color: rgb(12, 12, 12);
-font-size: 16px;
-padding: 5px 0;
-box-shadow: 0px 3px 3px rgba(0, 0, 0,);
+  color: rgb(12, 12, 12);
+  font-size: 16px;
+  padding: 5px 0;
 }
 
- .tabla_titulo {
-font-weight: bold;
- margin-bottom: 5px;
- font-size: 20px;
- padding: 5px 0;
- text-align: center;
- background: rgb(3, 180, 97);
- border: 1px solid graysilver;
-box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.3), 3px 0px 3px rgba(0, 0, 0, 0.3);
- }
+table th,
+table td {
+  border: 1px solid silver;
+  text-align: center;
+  font-size: 16px;
+  padding: 10px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
 
- .tabla_campos {
-background: #eee3e3;
- color: rgb(12, 12, 12);
- font-size: 16px;
- padding: 5px 0;
- box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.3), 3px 0px 3px rgba(0, 0, 0, 0.3);
- }
+/* Ajustes columnas */
+.contenedor_tabla th:nth-child(1),
+.contenedor_tabla td:nth-child(1) {
+  width: 10%; /* Id */
+}
 
- table tr {
- border: 1px solid silver;
- box-shadow: 1px 1px 1px #888888;
- }
+.contenedor_tabla th:nth-child(2),
+.contenedor_tabla td:nth-child(2) {
+  width: 25%; /* Nombre */
+}
 
- table td {
- text-align: center;
- font-size: 16px;
- padding: 10px;
- }
+.contenedor_tabla th:nth-child(3),
+.contenedor_tabla td:nth-child(3) {
+  width: 25%; /* Apellido */
+}
 
- .ocultar{
- display: none;
- }
+.contenedor_tabla th:nth-child(4),
+.contenedor_tabla td:nth-child(4) {
+  width: 40%; /* Teléfono flexible */
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
 
- .celdaTelefono{
- display: flex;
- justify-content: center;
- align-items: center;
- }
+/* Iconos dentro de la celda Teléfono */
+.celdaTelefono {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
- .celdaTelefono___dato{
- width: 70%;
- text-align: right;
- padding-right: 20px;
- }
+.celdaTelefono___dato {
+  flex: 1;
+  text-align: left;
+  padding-right: 10px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
 
- .celdaTelefono_iconosSpan{
- width: 30%;
- padding-right: 10pх;
- display: flex;
- justify-content: flex-end;
- gap: 12px;
- }
+.celdaTelefono_iconosSpan {
+  display: flex;
+  gap: 12px;
+}
 
- .icon-pencil{
- color: slateblue;
- font-weight: bold;
- cursor: pointer;
- }
- .icon-bin{
- color: red;
- font-weight: bold;
- cursor: pointer;
- }
+.icon-pencil {
+  color: slateblue;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.icon-bin {
+  color: red;
+  font-weight: bold;
+  cursor: pointer;
+}
