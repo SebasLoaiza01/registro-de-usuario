@@ -5,78 +5,94 @@
   box-sizing: border-box;
 }
 
-/* Configuración fuente */
+/* Fuente */
 @font-face {
   font-family: "miFuente";
   src: url("../fonts/Roboto-Regular.ttf");
 }
 
-/* Medidas de referencia html */
-html {
-  font-size: 100%;
-  width: 100%;
-  height: 100%;
-}
-
-/* Configuración del body */
+/* Body */
 body {
   background: azure;
-  font-family: miFuente;
+  font-family: miFuente, sans-serif;
   font-size: 100%;
 }
 
+/* Contenedor general */
 .contenedor {
-  width: 60%;
-  margin: 30px;
+  width: 80%;
+  margin: 30px auto;
   display: flex;
   align-items: flex-start;
-  gap: 20px;
+  gap: 30px;
 }
 
 /* Caja del formulario */
 .contenedor_formulario {
   border: 1px solid gray;
-  box-shadow: 0 0 3px rgba(0, 0, 0, 0.9);
-  width: 30%;
-  margin: 0 auto;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.9);
+  width: 80%;
+  margin: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 15px;
+  padding: 20px 15px;
   border-radius: 8px;
-  background: #fff;
+ 
 }
 
 .formulario_titulo {
-  margin-top: 10px;
+  margin-bottom: 10px;
   font-weight: bold;
   font-size: 22px;
 }
 
-/* Labels arriba de los inputs */
+/* === Inputs estilo Google === */
 .formulario_label {
-  margin-top: 15px;
+  position: relative;
+  margin-top: 25px;
   width: 100%;
-  font-size: 16px;
-  font-weight: bold;
+  max-width: 280px;
 }
 
 .formulario_input {
   width: 100%;
-  padding: 8px 12px;
-  margin-top: 5px;
-  border: 1px solid #aaa;
-  border-radius: 5px;
+  padding: 10px 0;
+  border: none;
+  border-bottom: 2px solid #ccc;
   font-size: 16px;
-  background: #fff;
+  background: transparent;
   outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.formulario_input:focus {
+  border-bottom: 2px solid slateblue;
+}
+
+.formulario_span {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 16px;
+  color: gray;
+  pointer-events: none;
+  transition: 0.3s ease all;
+}
+
+.formulario_input:focus + .formulario_span,
+.formulario_input:not(:placeholder-shown) + .formulario_span {
+  top: -5px;
+  font-size: 12px;
+  color: slateblue;
 }
 
 /* Botones */
 .formulario_botones {
   display: flex;
   gap: 10px;
-  margin-top: 20px;
+  margin-top: 25px;
 }
 
 .formulario_boton {
@@ -85,6 +101,7 @@ body {
   border-radius: 5px;
   font-weight: bold;
   color: slateblue;
+  background: transparent;
   cursor: pointer;
   transition: all 0.3s ease;
 }
@@ -94,8 +111,8 @@ body {
   color: white;
 }
 
-/* Sección datos */
-.contenedor__datos {
+/* === Sección datos === */
+.contenedor_datos {
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -118,7 +135,7 @@ body {
   border-radius: 5px;
 }
 
-.icon_search {
+.icon-search {
   padding: 5px;
   background: #fff;
   border: 1px solid #aaa;
@@ -134,7 +151,8 @@ body {
   margin: 0 auto;
   max-width: 800px;
   width: 100%;
-  table-layout: fixed;
+  height: auto;
+  
 }
 
 .tabla_titulo {
@@ -145,67 +163,50 @@ body {
   text-align: center;
   background: rgb(3, 180, 97);
   border: 1px solid silver;
-  color: white;
+  box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.3), 3px 0px 3px 1px rgba(0, 0, 0, 0.3);
 }
 
-.tabla_campos {
+.tabla__campos{
   background: #eee3e3;
   color: rgb(12, 12, 12);
   font-size: 16px;
   padding: 5px 0;
+  box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.3), 3px 0px 3pxrgba(0, 0, 0, 0.3);
 }
-
-table th,
-table td {
+tabble tr {
   border: 1px solid silver;
+  box-shadow: 1px 1px 3px #888888;
+}
+table td {
   text-align: center;
   font-size: 16px;
   padding: 10px;
-  word-wrap: break-word;
-  overflow-wrap: break-word;
 }
 
-/* Ajustes columnas */
-.contenedor_tabla th:nth-child(1),
-.contenedor_tabla td:nth-child(1) {
-  width: 10%; /* Id */
-}
-
-.contenedor_tabla th:nth-child(2),
-.contenedor_tabla td:nth-child(2) {
-  width: 25%; /* Nombre */
-}
-
-.contenedor_tabla th:nth-child(3),
-.contenedor_tabla td:nth-child(3) {
-  width: 25%; /* Apellido */
-}
-
-.contenedor_tabla th:nth-child(4),
-.contenedor_tabla td:nth-child(4) {
-  width: 40%; /* Teléfono flexible */
-  word-wrap: break-word;
-  overflow-wrap: break-word;
+/* Ocultar */
+.ocultar {
+  display: none;
 }
 
 /* Iconos dentro de la celda Teléfono */
 .celdaTelefono {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 }
 
 .celdaTelefono___dato {
-  flex: 1;
-  text-align: left;
-  padding-right: 10px;
-  word-wrap: break-word;
-  overflow-wrap: break-word;
+  width: 70%;
+  text-align: right;
+  padding-right: 20px;
 }
 
-.celdaTelefono_iconosSpan {
+.celdaTelefono___iconosSpan {
+  width: 30%;
+  padding-right: 10px;
   display: flex;
-  gap: 12px;
+  justify-content: flex-end;
+  gap: 13px;
 }
 
 .icon-pencil {
