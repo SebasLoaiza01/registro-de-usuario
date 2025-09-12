@@ -1,93 +1,62 @@
-# Proyecto Scrum - Registro de Usuarios
+# 📌 Proyecto SCRUM - Registro de Usuarios
 
-Este proyecto implementa un **sistema de registro de usuarios**
-siguiendo la metodología **Scrum**.
+Este proyecto consiste en una aplicación web que permite **registrar, mostrar, buscar, editar y eliminar usuarios** utilizando **HTML, CSS y JavaScript**, con persistencia de datos en **LocalStorage**.  
 
-## 🚀 Descripción
-
-El objetivo principal es permitir que los usuarios se registren en el
-sistema con credenciales seguras y almacenar su información de manera
-organizada.
-
-## 📌 Características
-
--   Registro de nuevos usuarios
--   Validación de datos (correo, contraseña, etc.)
--   Almacenamiento en base de datos
--   Interfaz sencilla e intuitiva
-
-## 🛠️ Tecnologías utilizadas
-
--   Lenguaje: **Python / JavaScript / Java** (dependiendo del stack del
-    equipo)
--   Base de datos: **MySQL / PostgreSQL / MongoDB**
--   Frameworks: **Flask / Spring Boot / Express.js**
+## 🚀 Características principales
+- Registro de usuarios con formulario.
+- Almacenamiento de datos en LocalStorage.
+- Búsqueda de usuarios en tiempo real.
+- Opciones para editar y eliminar registros.
+- Diseño adaptable (Responsive Design con `mobile.css`).
+- Separación de lógica en archivos: `script.js` y `libreria.js`.
 
 ## 📂 Estructura del proyecto
+```
+📦 registro-usuarios
+ ┣ 📜 index.html
+ ┣ 📜 style.css
+ ┣ 📜 mobile.css
+ ┣ 📜 libreria.js
+ ┣ 📜 script.js
+ ┗ 📜 README.md
+```
 
-    /registro-usuarios
-    │── src/           # Código fuente
-    │── docs/          # Documentación del proyecto
-    │── tests/         # Pruebas unitarias
-    │── README.md      # Archivo actual
+## ⚙️ Tecnologías utilizadas
+- **HTML5** → Estructura del proyecto.  
+- **CSS3** → Estilos principales y responsive.  
+- **JavaScript (ES6+)** → Lógica y manipulación de datos.  
+- **LocalStorage** → Persistencia de datos en el navegador.  
 
-## 📅 Gestión con Scrum
+## 📖 Instrucciones de instalación
+1. Clona este repositorio o descarga el proyecto:
+   ```bash
+   git clone https://github.com/tu-usuario/registro-usuarios.git
+   ```
+2. Abre el proyecto en tu editor de preferencia (VS Code recomendado).  
+3. Ejecuta el archivo `index.html` en tu navegador.  
 
-El proyecto se desarrolla en **sprints** de 2 semanas, con las
-siguientes ceremonias:
+## 🎯 Backlog del Proyecto (SCRUM)
+- [x] Crear estructura HTML.  
+- [x] Estilos principales (`style.css`).  
+- [x] Estilos responsive (`mobile.css`).  
+- [x] Funciones de registro de usuarios (`libreria.js`).  
+- [x] Funciones principales (`script.js`).  
+- [ ] Validaciones avanzadas en formulario.  
+- [ ] Exportación de datos a CSV/JSON.  
+- [ ] Integración con base de datos externa.  
 
--   **Daily Scrum**: reunión diaria de 15 minutos
--   **Sprint Planning**: planificación de tareas
--   **Sprint Review**: revisión de funcionalidades al final de cada
-    sprint
--   **Sprint Retrospective**: retroalimentación y mejora continua
+## 👥 Roles en el equipo (Ejemplo SCRUM)
+- **Product Owner**: Define requisitos y prioridades.  
+- **Scrum Master**: Facilita el proceso ágil.  
+- **Development Team**: Desarrolla las funcionalidades.  
 
-## 📋 Requisitos previos
+## 📌 Uso
+1. Completa el formulario de registro.  
+2. Haz clic en **Registrar** para guardar el usuario.  
+3. Usa **Mostrar/Ocultar** para ver la tabla de usuarios.  
+4. Filtra los usuarios con el buscador en tiempo real.  
+5. Edita o elimina registros directamente desde la tabla.  
 
--   Tener instalado **Git**
--   Tener instalado **Python/Java/Node.js** según el stack elegido
--   Configurar la base de datos
+---
 
-## ▶️ Instalación y ejecución
-
-1.  Clonar el repositorio:
-
-    ``` bash
-    git clone https://github.com/usuario/registro-usuarios.git
-    ```
-
-2.  Entrar al proyecto:
-
-    ``` bash
-    cd registro-usuarios
-    ```
-
-3.  Ejecutar el proyecto según el stack configurado.
-
-## 🤝 Contribución
-
-1.  Hacer un **fork** del repositorio
-
-2.  Crear una nueva rama:
-
-    ``` bash
-    git checkout -b feature-nueva-funcionalidad
-    ```
-
-3.  Hacer commit de los cambios:
-
-    ``` bash
-    git commit -m "Agregada nueva funcionalidad"
-    ```
-
-4.  Subir la rama:
-
-    ``` bash
-    git push origin feature-nueva-funcionalidad
-    ```
-
-5.  Crear un **Pull Request**
-
-## 📜 Licencia
-
-Este proyecto está bajo la licencia **MIT**.
+💡 Proyecto desarrollado con **SCRUM** como metodología ágil para la gestión del desarrollo.  

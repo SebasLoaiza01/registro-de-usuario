@@ -15,69 +15,61 @@
 </head>
 
 <body>
-  <!-- Contenedor general de la Aplicación -->
+  <!-- Contenedor general -->
   <div class="contenedor">
-    <!-- Formulario de ingreso de datos -->
-    <div class="contenedor__formulario">
-      <!-- Título del formulario -->
-      <h2 class="formulario__titulo">Ingreso de datos</h2>
+    <!-- Formulario -->
+    <div class="contenedor_formulario">
+      <h2 class="formulario_titulo">Ingreso de datos</h2>
+
       <!-- Input Nombre -->
-      <label class="formulario__label">
-        <input type="text" class="formulario__input" id="inputNombre" placeholder="" autocomplete="off" />
-        <span class="formulario__span">Nombre:</span>
+      <label class="formulario_label">
+        <input type="text" class="formulario_input" id="inputNombre" placeholder=" " autocomplete="off" />
+        <span class="formulario_span">Nombre</span>
       </label>
+
       <!-- Input Apellido -->
-      <label class="formulario__label">
-        <input type="text" class="formulario__input" id="inputApellido" placeholder="" autocomplete="off" />
-        <span class="formulario__span">Apellido:</span>
+      <label class="formulario_label">
+        <input type="text" class="formulario_input" id="inputApellido" placeholder=" " autocomplete="off" />
+        <span class="formulario_span">Apellido</span>
       </label>
+
       <!-- Input Teléfono -->
-      <label class="formulario__label">
-        <input type="number" class="formulario__input" id="inputTelefono" placeholder="" autocomplete="off" />
-        <span class="formulario__span">Teléfono:</span>
+      <label class="formulario_label">
+        <input type="number" class="formulario_input" id="inputTelefono" placeholder=" " autocomplete="off" />
+        <span class="formulario_span">Teléfono</span>
       </label>
-      <div class="formulario__botones">
-        <!-- Botón Registrar -->
-        <button class="formulario__boton" id="botonRegistrar">
-          Registrar
-        </button>
-        <!-- Botón Mostrar/Ocultar tabla -->
-        <button class="formulario__boton" id="botonMostrar">
-          Mostrar
-        </button>
+
+      <!-- Botones -->
+      <div class="formulario_botones">
+        <button class="formulario_boton" id="botonRegistrar">Registrar</button>
+        <button class="formulario_boton" id="botonMostrar">Mostrar</button>
       </div>
     </div>
 
-    <!-- Contenedor de búsqueda y tabla de datos -->
-    <div class="contenedor__datos">
-      <!-- Sistema de búsqueda por nombre -->
-      <div class="contenedor__filtro">
-        <!-- Input que recibe dato a buscar (nombre) -->
-        <input type="text" class="filtro__input" id="inputFiltro" placeholder="Nombre del contacto"
-          autocomplete="off" />
-        <!-- Botón de búsqueda (Lupa) -->
-        <span class="icon__search" id="botonFiltrar"></span>
+    <!-- Sección de búsqueda y tabla -->
+    <div class="contenedor_datos">
+      <div class="contenedor_filtro">
+        <input type="text" class="filtro_input" id="inputFiltro" placeholder="Nombre del contacto" autocomplete="off" />
+        <span class="icon-search" id="botonFiltrar"></span>
       </div>
 
-      <!-- Tabla para mostrar resultados -->
-      <table class="contenedor__tabla" id="tablaDatos">
-        <!-- Título de la tabla -->
-        <caption class="tabla__titulo">Registros</caption>
-        <!-- Encabezado (Campos de la tabla) -->
+      <!-- Tabla -->
+      <table class="contenedor_tabla" id="tablaDatos">
+        <caption class="tabla_titulo">Registros</caption>
         <thead>
           <tr>
-            <th class="tabla__campos">Id</th>
-            <th class="tabla__campos">Nombre</th>
-            <th class="tabla__campos">Apellido</th>
-            <th class="tabla__campos">Teléfono</th>
+            <th class="tabla__campo">Id</th>
+            <th class="tabla__campo">Nombre</th>
+            <th class="tabla__campo">Apellido</th>
+            <th class="tabla__campo">Teléfono</th>
           </tr>
         </thead>
-        <!-- Cuerpo de la tabla -->
-        <tbody class="tabla__resultados" id="resultados"></tbody>
+        <tbody class="tabla_resultados" id="resultados"></tbody>
       </table>
     </div>
   </div>
-  <!-- Scripts de la aplicación -->
+
+  <!-- Scripts -->
   <script type="module" src="./js/script.js"></script>
 </body>
 
